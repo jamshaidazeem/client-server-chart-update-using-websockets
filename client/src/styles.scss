@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body full page, body uses tailwind container class, to center its content margin auto is used */
+body {
+  height: 100vh;
+  width: 100%;
+  background: white;
+  margin: auto;
+}
