@@ -1,5 +1,28 @@
 <div class="flex flex-row justify-center items-center w-full h-full bg-gray-50">
+  <!-- content div -->
   <div
     class="flex flex-col justify-start items-start w-2/4 h-2/4 border border-gray-300 rounded-md p-4"
-  ></div>
+  >
+    <!-- intervals container -->
+    <div class="flex flex-row w-100 justify-start items-center">
+      <p
+        class="flex-none h-full pt-1 pb-1 pr-1 me-1 border-r border-slate-300 font-semibold"
+      >
+        Interval
+      </p>
+      <!-- interval labels -->
+      <div class="flex font-thin text-sm space-x-2">
+        <label *ngFor="let item of intervals">
+          <input
+            name="interval"
+            type="radio"
+            class="sr-only peer"
+            (change)="onUpdateInterval(item.value)"
+            [checked]="selectedInterval === item.value"
+          />
+          <div class="interval-label">{{ item.label }}</div>
+        </label>
+      </div>
+    </div>
+  </div>
 </div>
